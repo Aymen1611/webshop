@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shoppingcart</title>
+
+    <link rel="stylesheet" href="/css/style2.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,300;1,700&family=Montserrat:wght@500&family=Open+Sans:ital,wght@0,400;0,500;1,400&family=Poppins:wght@600&family=Roboto:ital,wght@1,700&display=swap" rel="stylesheet">
+
+    <script src="/js/shop.js" defer></script>
+
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="headerTitle">TopGLibrary</h1>
+       
+        <div class="container-fluid">
+            <nav class="navbar navbar-inverse">
+              <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                  <li><a id="len1" class="hoverable" href="/code/index.html">Home</a></li>
+                  <li><a id="len2" class="hoverable" href="/code/htmls/about.html">About</a></li>
+                  <li><a id="len3" class="hoverable" href="#">Portfolio</a></li>
+                  <li><a id="len4" class="hoverable" href="/code/htmls/contact.html">Contact</a></li>
+                </ul>
+              </div>
+            </nav>
+            <div id="what-the-hell-is-this">
+              <div class="page-title">
+              </div>
+            </div>
+          </div>
+
+    </header>
+    <section id="js--checkoutWindow" class="checkout a-popup">
+
+        <ul class="checkout__list">
+
+            <li class="checkout__listitem">
+
+                <img src="/img/550x783.jpg" alt="" class="checkout__img">
+
+                <p class="checkout__titel">Think And Grow Rich</p>
+
+                <p id="js--amount-simb"class="checkout__amount"></p>
+
+                <P id="js--prijs-simb"class="checkout__amount"></P>
+
+            </li>
+
+            <li class="checkout__listitem">
+
+                <img src="/img/51hC116Qu-L (1).jpg" alt="" class="checkout__img">
+
+                <p class="checkout__titel">101 Ways To Get Rich</p>
+
+                <p id="js--amount-dalmatians"class="checkout__amount"></p>
+
+                <P id="js--prijs-dalmatians"class="checkout__amount"></P>
+
+            </li>
+
+            <li class="checkout__listitem">
+
+                <img src="/img/48power.jpg" alt="" class="checkout__img">
+
+                <p class="checkout__titel">The 48 Laws of Power</p>
+
+                <p id="js--amount-buzz"class="checkout__amount"></p>
+
+                <P id="js--prijs-buzz"class="checkout__amount"></P>
+
+            </li>
+
+            <li class="checkout__listitem">
+
+                <img src="/img/rich dad poor dad.jpg" alt="" class="checkout__img">
+
+                <p class="checkout__titel">RICH dad POOR dad</p>
+
+                <p id="js--amount-winnie"class="checkout__amount"></p>
+
+                <P id="js--prijs-winnie"class="checkout__amount"></P>
+
+            </li>
+
+            <li class="checkout__listitem">
+
+                <img src="/img/how to win voorkant.png" alt="" class="checkout__img">
+
+                <p class="checkout__titel">How To Win Friends And Influence People</p>
+
+                <p id="js--amount-lilo"class="checkout__amount"></p>
+
+                <P id="js--prijs-lilo"class="checkout__amount"></P>
+
+            </li>
+
+        </ul>
+
+    </section>
+
+    <article class="modal a-popup" id="js--shoppingModal">&#10003;Added to cart</article>
+
+    <button id="js--checkoutButton" class="shoppingCart">
+
+        <span id="logo"class="material-symbols-outlined">
+
+            shopping_cart
+
+            </span>
+
+        <div class="shoppingCart__massage">0</div>
+
+    </button>
+
+
+    <section class="searchBar">
+
+        <input id="js--searchBar" type="text" placeholder="Search for a product" class="searchBar__input">
+
+        <div id="js--searchBarGlass">
+
+        <span class="material-symbols-outlined searchBar__glass">
+
+            search
+
+            </span>
+
+        </div>
+
+    </section>
+
+    <main>
+
+        <ul class="games">
+
+            <li data-title="THINK AND GROW RICH" class="games_game">
+
+                <figure class="games_figure"><img src="/img/550x783.jpg" alt="" class="games_img"></figure>
+
+                <section class="games__body">
+
+                    <h2 class="games_h2">€55</h2>
+
+                    <h3 class="games__h3">Think and Grow Rich</h3>
+
+                    <div class="games__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+
+                    <button data-product="simba" class="games_button">Add to Card</button>
+
+                </section>
+
+            </li>
+
+            <li data-title="101 WAYS TO GET RICH" class="games_game">
+
+                <figure class="games_figure"><img src="/img/51hC116Qu-L (1).jpg" alt="" class="games_img"></figure>
+
+                <section class="games__body">
+
+                    <S>€69</S>
+
+                    <h2 class="games_h2">€53</h2>
+
+                    <h3 class="games__h3">101 Ways To Get Rich</h3>
+
+                    <div class="games__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+
+                    <button data-product="dalmatians" class="games_button">Add to Card</button>
+
+                </section>
+
+            </li>
+
+            <li data-title="THE 48" class="games_game">
+
+                <figure class="games_figure"><img src="/img/48power.jpg" alt="" class="games_img"></figure>
+
+                <section class="games__body">
+
+                    <h2 class="games_h2">€44</h2>
+
+                    <h3 class="games__h3">The 48 Laws of Power</h3>
+
+                    <div class="games__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+
+                    <button data-product="buzz" class="games_button">Add to Card</button>
+
+                </section>
+
+            </li>
+
+            <li data-title="RICH DAD POOR DAD" class="games_game">
+
+                <figure class="games_figure"><img src="/img/rich dad poor dad.jpg" alt="" class="games_img"></figure>
+
+                <section class="games__body">
+
+                    <S>€89</S>
+
+                    <h2 class="games_h2">€75,55</h2>
+
+                    <h3 class="games__h3">RICH Dad POOR dad</h3>
+
+                    <div class="games__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+
+                    <button data-product="winnie" class="games_button">Add to Card</button>
+
+                </section>
+
+            </li>
+
+            <li data-title="HOW TO WIN FRIENDS AND INFLUENCE PEOPLE" class="games_game games_game--third">
+
+                <figure class="games_figure"><img src="/img/how to win voorkant.png" alt="" class="games_img"></figure>
+
+                <section class="games__body">
+
+                    <h2 class="games_h2">€45</h2>
+
+                    <h3 class="games__h3">How To Win Friends And Influence People</h3>
+
+                    <div class="games__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+
+                    <button data-product="lila" class="games_button">Add to Card</button>
+
+                </section>
+
+            </li>
+
+        </ul>
+
+    </main>
+
+
+</body>
+
+</html>
