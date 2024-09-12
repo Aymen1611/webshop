@@ -2,193 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TopGBOOKS</title>
-    <link rel="stylesheet" href="/webshop/css/style.css">
-    <script src="/webshop/js/main.js" defer></script>
+    <title>Skateboard Shop</title>
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
-<body id="js--body">
-    <header class="header">
-        <h1 class="headerTitle">TopGBooks</h1>
-        <h2>
-            <a href="#info" class="logo">
-              <img src="/webshop/img/topg-transformed.webp" />
-            </a>
-        </h2>
-        <div class="container-fluid">
-            <nav class="navbar navbar-inverse">
-              <div class="container-fluid">
-                <ul class="nav navbar-nav">
-                  <li><a id="len1" class="hoverable" href="/webshop/code/index.html">Home</a></li>
-                  <li><a id="len2" class="hoverable" href="/webshop/code/htmls/about.html">About</a></li>
-                  <li><a id="len3" class="hoverable" href="/webshop/code/htmls/filter.html">Product Pagina 1#</a></li>
-                  <li><a id="len4" class="hoverable" href="/webshop/code/htmls/shop.html">Product Pagina 2#</a></li>
-                </ul>
-              </div>
-            </nav>
-            <div id="what-the-hell-is-this">
-              <div class="page-title">
-              </div>
+<body>
+    <div class="container">
+        <div class="header">
+            <img id="logo" src="/img/logo.png" alt="Logo">
+            <h1>Kies je skateboard</h1>
+        </div>
+        <div class="skateboard-display">
+            <img id="mainSkateboardImage" src="/img/skateboard-rood.png" alt="Skateboard">
+            <img id="selectedSticker" src="" alt="Sticker" style="display:none;">
+        </div>
+        <div class="price-display">
+            <p id="price">€00,00</p>
+        </div>
+        <div class="color-buttons">
+            <button class="color-button" id="red" onclick="changeSkateboard(1)">Rood</button>
+            <button class="color-button" id="blue" onclick="changeSkateboard(2)">Blauw</button>
+            <button class="color-button" id="yellow" onclick="changeSkateboard(3)">Geel</button>
+            <button class="color-button" id="gray" onclick="changeSkateboard(4)">Grijs</button>
+        </div>
+        <div class="sticker-buttons">
+            <div class="sticker-button-container">
+                <button class="sticker-button" onclick="changeSticker(1)">Sticker 1</button>
+                <button class="sticker-button" onclick="changeSticker(2)">Sticker 2</button>
+                <button class="sticker-button" onclick="changeSticker(3)">Sticker 3</button>
+                <button class="sticker-button" onclick="changeSticker(4)">Sticker 4</button>
+                <button class="sticker-button" onclick="changeSticker(5)">Sticker 5</button>
+                <button class="sticker-button" onclick="changeSticker(6)">Sticker 6</button>
+                <button class="sticker-button" onclick="changeSticker(7)">Sticker 7</button>
+                <button class="sticker-button" onclick="changeSticker(8)">Sticker 8</button>
+                <button class="sticker-button" onclick="changeSticker(9)">Sticker 9</button>
+              
             </div>
-          </div>
-
-    </header>
-    
-    <main>
-         
-    <figure class="Bigfigure">
-        <div class="BigfigureBar">
-            
-          <a  class="shopknop" href="/webshop/code/htmls/shop.html">SHOP NOW</a>
-          
         </div>
-        <img src="/webshop/img/best-money-mindset-books.png" alt="">
-    </figure>
-    <section class="heading">
-        <ul> 
-            
-            <li class="headingitem">
-                <img src="/webshop/img/Untitled-design-68.jpg" alt="">
-            </li>
-        </ul>
+        <button class="buy-button">BESTELLEN</button>
+    </div>
 
-        <p class="headingtext">LEES NU ! Rich Dad Poor Dad</p>
-    </section>
-    <section class="collections">
-        <h2 class="collectionsTitle">Best Sellers</h2>
-        <ul class="collectionsList">
-            <li class="collectionsListItem">
-                <img src="/webshop/img/il_fullxfull.4182810013_2r1j.webp" alt="">
-            </li>
-            <li class="collectionsListItem">
-                <img src="/webshop/img/550x783.jpg" alt="">
-            </li>
-            <li class="collectionsListItem">
-                <img src="/webshop/img/48power.jpg" alt="">
-            </li>
-            <li class="collectionsListItem">
-                <img src="/webshop/img/how to win friends zijkant.jpg" alt="">
-           
-        </ul>
-    </section>
-</section>
-<section class="section section--third">
-    <h2 class="h2review">Reviews</h2>
-    <button class="arrow"><</button>
-    <ul class="reviews">
-        <li class="review">
-            <figure class="quote">
-                    &#10077;
-            </figure>
-            <section class="stars">
-                &#9733;
-                 &#9733; 
-                 &#9733;
-                 &#9733; 
-                 &#9733;</section>
-            <p>1.Als boekenliefhebber ben ik altijd op zoek naar bijzondere boekwinkels waar ik mijn hart kan ophalen. 
-                Ik kan met volle overtuiging zeggen dat mijn recente bezoek aan jouw boeken webshop een waar genot was. 
-                
-               </p>
-        </li>
+    <script>
+        let skateboards = {};
+        let stickers = {};
 
-      
-            <li class="review">
-                <figure class="quote">
-                    &#10077;
-            </figure>
-                <section class="stars">
-                    &#9733;
-                    &#9733;
-                    &#9733; 
-                    &#9733;
-                    </section>
-                <p>2.Ik ben recentelijk een trouwe klant geworden van jouw online boekenwinkel en 
-                    ik moet zeggen dat ik erg onder de indruk ben. De website is zeer gebruiksvriendelijk,
-                     met een intuïtieve navigatie waardoor ik moeiteloos mijn favoriete boeken kan vinden. 
-                      </p>
-            </li>
+        fetch('/data/skateboards.json')
+            .then(response => response.json())
+            .then(data => {
+                skateboards = data;
+            })
+            .catch(error => console.error('Error loading skateboards JSON:', error));
 
-            
-                <li class="review">
-                    <figure class="quote">
-                        &#10077;
-                </figure>
-                    <section class="stars">
-                        &#9733; 
-                        &#9733;
-                        &#9733;</section>
-                    <p>3. Wat een geweldige verzameling boeken heeft jouw online winkel te bieden! 
-                        Of ik nu op zoek ben naar een spannende thriller, een romantische roman of een informatief non-fictieboek,
-                         ik kan altijd vertrouwen op jouw uitgebreide collectie om aan mijn leesbehoeften te voldoen.  </p>
-                </li>
+        fetch('/data/stickers.json')
+            .then(response => response.json())
+            .then(data => {
+                stickers = data;
+            })
+            .catch(error => console.error('Error loading stickers JSON:', error));
 
-                <li class="review">
-                    <figure class="quote">
-                        &#10077;
-                </figure>
-                    <section class="stars">
-                        &#9733; 
-                        &#9733;
-                        &#9733; 
-                        &#9733; 
-                        &#9733;</section>
-                    <p>4.Ik ben zeer tevreden over de snelle levering en uitstekende klantenservice die ik heb ervaren bij jouw online boekenwinkel.
-                         Mijn bestellingen werden altijd binnen de opgegeven tijd geleverd, 
-                        en als ik vragen had of hulp nodig had,
-                         stond het vriendelijke en behulpzame klantenserviceteam altijd voor me klaar.  </p>
-                </li>
-
-                <li class="review">
-                    <figure class="quote">
-                        &#10077;
-                </figure>
-                    <section class="stars">
-                        &#9733; 
-                        &#9733;
-                        &#9733;</section>
-                    <p>5. Wat ik het meest waardeer aan jouw online boekenwinkel zijn de geweldige aanbevelingen en
-                         boekentips die ik regelmatig ontvang.
-                         Het is duidelijk dat het team achter de schermen zeer goed op de hoogte is van de nieuwste releases en trends in de boekenwereld. </p>
-                </li>
-
-                <li class="review">
-                    <figure class="quote">
-                        &#10077;
-                </figure>
-                    <section class="stars">
-                        &#9733; 
-                        &#9733; 
-                        &#9733;
-                        &#9733;</section>
-                    <p>6.Ik voel me altijd veilig en gerustgesteld wanneer ik winkel bij jouw online boekenwinkel. 
-                        De website is goed beveiligd en ik kan erop vertrouwen dat mijn persoonlijke gegevens veilig worden behandeld. Bovendien zijn de betalingsmogelijkheden flexibel en betrouwbaar.
-                       </p>
-                </li>
        
-   </ul>
-    <button class="arrow">></button>
-</section>
-    <section class="info">
-        <div class="block">
-        </div>
-        <div class="block">
-        
-        </div>
-    </section>
+        function changeSkateboard(id) {
+            const skateboard = skateboards[id];
+            if (skateboard) {
+                document.getElementById('mainSkateboardImage').src = skateboard.image;
+                document.getElementById('price').textContent = skateboard.price;
+            }
+        }
 
-   
-    </section>
-</main>
-<footer class="footer">
-   
         
-    </ul>
-    <address>                   
-       contactweg 8
-      
-    </address>
-</footer>
+        function changeSticker(id) {
+            const stickerUrl = stickers[id];
+            if (stickerUrl) {
+                const stickerElement = document.getElementById('selectedSticker');
+                stickerElement.src = stickerUrl;
+                stickerElement.style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>
